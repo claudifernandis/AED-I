@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+
+    int N, K, i, j, contador = 0;
+    char idioma[21], S[21];
+    
+    scanf("%d", &N);
+
+    for(int i = 0; i < N; i++){
+        scanf("%d\n", &K);
+        
+        scanf("%s\n", &idioma);
+        for(int j = 1; j < K; j++){
+            scanf("%s\n", &S);
+            
+            if(strcmp(S, idioma) == 0){
+                contador += 1;
+            }
+        }
+        if (contador == K-1)
+            printf("%s\n", idioma);
+        else
+            printf("ingles\n");
+    }
+    return 0;
+}
